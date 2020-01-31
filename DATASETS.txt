@@ -1,0 +1,25 @@
+Data Set 1 - CDC VAERS (Vaccine Adverse Event Reporting System) 2019.
+Includes 3 data sets - Primary Information, Symptoms, Vaccines with around 16,000 rows each.
+This data states whether or not an adverse event took place after a vaccine was administered and
+	what took place afterwards. Our main focus is the fact that many patients died while also having
+	adverse effects. We want to see if anything outside of the vaccine itself can be attributed to the death.
+Among the 3 data sets variables include - patient age, the type of vaccine taken, state/time injection
+	administered, gender, symptoms (though these are all unique), death of patient, ER visit,
+	hospitilization, if symptoms life threatening, if recovered, if they had current illnesses,
+	and vaccine information such as type, manufacturer, dose, and administration site.
+https://vaers.hhs.gov/data/datasets.html
+	
+Data Set 2 - Behavior Risk Factor Surveillance System - 2014 (unless we find more recent year).
+Includes 1 data set with 464,000 rows.
+This data set is comprised of interviews from US residents about general health, mental health, and
+	medical expenses. We want to pair this data with our first set to see if we can find more connections
+	to the adverse event deaths.
+Variables include state, health ratings, health coverage, doctor information, exercise, sleep, and
+	various general questions related to physical and mental health.
+https://public.enigma.com/browse/collection/behavior-risk-factor-surveillance-system/b8a2f5bb-add2-4161-9f6e-6ef3520a018e
+
+We want to use these data sets primarily to find out if there is any connection to the adverse events that
+	took place and a persons general health or other information. Is it just babies and old people that are having
+	issues with vaccines? Is there something in common the old people have? Is it physical health, mental health,
+	or some other underlying factor such as where they live or health care issues. With these data sets we hope
+	to find some sort of correlation between the two.
