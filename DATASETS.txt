@@ -8,6 +8,43 @@ VAERS was created to detect unusual patterns of adverse events which might indic
 
 Our main focus is the fact that many patients died or experienced adverse effects after vaccination. We want to investigate if anything outside of the vaccine itself can be attributed to these deaths or symptoms. We are interested in looking at whether there is a high correlation between the adverse effects and particular attributes of patients or vaccines, while keeping in mind that correlation does not indicate causation. For instance, are patients who experience adverse symptoms from a particular state, age group, or are currently diagnosed with a certain type of illness? Are these events related to a particular vaccine type, manufacturer or route of administration?
 
+
+Sample Data:
+
+
+1) VAERS Primary Information
+
+VAERS_ID	RECVDATE	STATE	AGE_YRS	CAGE_YR	CAGE_MO	SEX	DIED	DATEDIED	L_THREAT	ER_VISIT	HOSPITAL	HOSPDAYS	X_STAY	DISABLE	RECOVD	VAX_DATE	ONSET_DATE	NUMDAYS	LAB_DATA	V_ADMINBY	CUR_ILL	HISTORY	PRIOR_VAX	SPLTTYPE	FORM_VERS	TODAYS_DATE	BIRTH_DEFECT	OFC_VISIT	ER_ED_VISIT	ALLERGIES
+
+794461	01-03-19	WA	79	79		M	Y								N	11/19/2018	11/26/2018	7		OTH		PVD; HLD; GERD; DM; HTN; morbidly obese			1		
+
+794483	01-03-19	NC	1	1	0	M	Y	01-04-18	Y		Y	5			U	01/30/2017	02-09-17	10	Lumbar Puncture- Negative results	None			2	01-03-19			Y	None
+
+794732	01-04-19	CO	0.17	0	0.2	M	Y	12/16/2018							N	12-10-18	12/16/2018	6	Waiting on Autopsy and toxicology reports.	PVT	None	None			2	01-04-19				None
+
+
+2) VAERS Symptoms
+
+VAERS_ID	SYMPTOM1	SYMPTOMVERSION1	SYMPTOM2	SYMPTOMVERSION2	SYMPTOM3	SYMPTOMVERSION3	SYMPTOM4	SYMPTOMVERSION4	SYMPTOM5	SYMPTOMVERSION5
+
+794156	Injected limb mobility decreased	21.1	Injection site joint pain	21.1						
+794157	Apathy	21.1	Arthralgia	21.1	Asthenia	21.1	Injection site erythema	21.1	Injection site pain	21.1
+
+794157	Injection site pruritus	21.1	Injection site swelling	21.1	Injection site warmth	21.1	Listless	21.1	Night sweats	21.1
+
+
+3) VAERS Vaccines
+
+VAERS_ID	VAX_TYPE	VAX_MANU	VAX_LOT	VAX_DOSE_SERIES	VAX_ROUTE	VAX_SITE	VAX_NAME
+
+794156	FLU4	GLAXOSMITHKLINE BIOLOGICALS	JZ3B7	UNK	IM	LA	INFLUENZA (SEASONAL) (FLUARIX QUADRIVALENT)
+
+794157	VARZOS	GLAXOSMITHKLINE BIOLOGICALS		UNK			ZOSTER (SHINGRIX)
+
+794158	VARZOS	GLAXOSMITHKLINE BIOLOGICALS		UNK			ZOSTER (SHINGRIX)
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
 	
 Secondary Dataset: Behavior Risk Factor Surveillance System 2014 (unless we find more recent data) by Centers for Disease Control and Prevention (CDC).
 
@@ -18,3 +55,8 @@ This dataset includes 1 file with 464,000 rows.
 The data set is comprised of interviews of US residents about general health, mental health, and medical expenses. We plan to pair this data with our primary dataset to see if we can find more connections to the adverse events from vaccination. Attributes include state, health ratings, health coverage, doctor information, exercise, sleep, and various general questions related to physical and mental health.
 
 We want to use these datasets primarily to find out if there is any connection between the adverse events that took place and a person's general health or healthcare access. Is it babies and old people that are experiencing issues with vaccines? Is there something in common the elderly have? Is it physical health, mental health, or some other underlying factor such as where they live or health care issues. With these datasets, we hope to find some sort of correlation between the two.
+
+
+Sample Data:
+
+
