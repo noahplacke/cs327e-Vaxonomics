@@ -4,7 +4,7 @@ Download link: https://vaers.hhs.gov/data/datasets.html
 
 The dataset consists of 3 files - Primary Information, Symptoms and Vaccines, with around 45,000 to 50,000 rows each. 
 
-VAERS was created to detect unusual patterns of adverse events which might indicate a possible safety problem with a vaccine. This data contains the list of reported adverse events after a vaccine was administered as well as details regarding the patient, vaccine and symptoms experienced. Among the 3 dataset files, interesting attributes include patient's age, gender, state, date of vaccination, symptoms (though these are all unique), if they were life-threatening, ER visit, hospitilization, death of patient (if occured), whether patient recovered, current illness, and vaccine information, such as type of vaccine administered, manufacturer, dosage and administration route.
+VAERS was created to detect unusual patterns of adverse events which might indicate a possible safety problem with a vaccine. This data contains the list of reported adverse events after a vaccine was administered as well as details regarding the patient, vaccine and symptoms experienced. Among the 3 dataset files, interesting attributes include patient's age, gender, state, date of vaccination, symptoms (though these are all unique), if they were life-threatening, ER visit, hospitalization, death of patient (if occurred), whether patient recovered, current illness, and vaccine information, such as type of vaccine administered, manufacturer, dosage and administration route.
 
 Our main focus is the fact that many patients died or experienced adverse effects after vaccination. We want to investigate if anything outside of the vaccine itself can be attributed to these deaths or symptoms. We are interested in looking at whether there is a high correlation between the adverse effects and particular attributes of patients or vaccines, while keeping in mind that correlation does not indicate causation. For instance, are patients who experience adverse symptoms from a particular state, age group, or are currently diagnosed with a certain type of illness? Are these events related to a particular vaccine type, manufacturer or route of administration?
 
@@ -48,7 +48,7 @@ VAERS_ID	VAX_TYPE	VAX_MANU	VAX_LOT	VAX_DOSE_SERIES	VAX_ROUTE	VAX_SITE	VAX_NAME
 	
 Secondary Dataset: Behavior Risk Factor Surveillance System 2014 (unless we find more recent data) by Centers for Disease Control and Prevention (CDC).
 
-Donwload link: https://public.enigma.com/browse/collection/behavior-risk-factor-surveillance-system/b8a2f5bb-add2-4161-9f6e-6ef3520a018e
+Download link: https://public.enigma.com/browse/collection/behavior-risk-factor-surveillance-system/b8a2f5bb-add2-4161-9f6e-6ef3520a018e
 
 This dataset includes 1 file with 464,000 rows.
 
