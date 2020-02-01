@@ -1,33 +1,20 @@
-Data Set 1: Centers for Disease Control and Prevention (CDC) - Vaccine Adverse Event Reporting System (VAERS) 2019.
+Primary Dataset: Vaccine Adverse Event Reporting System (VAERS) 2019 by Centers for Disease Control and Prevention (CDC).
 
 Download link: https://vaers.hhs.gov/data/datasets.html
 
-The dataset consists of 3 files - Primary Information, Symptoms and Vaccines with around 16,000 rows each. 
-This data states whether or not an adverse event took place after a vaccine was administered and 
-what took place afterwards. Our main focus is the fact that many patients died while also having
-adverse effects. We want to see if anything outside of the vaccine itself can be attributed to the death.
-Among the 3 data sets variables include - patient age, the type of vaccine taken, state/time injection
-administered, gender, symptoms (though these are all unique), death of patient, ER visit,
-hospitilization, if symptoms life threatening, if recovered, if they had current illnesses,
-and vaccine information such as type, manufacturer, dose, and administration site.
+The dataset consists of 3 files - Primary Information, Symptoms and Vaccines, with around 45,000 to 50,000 rows each. 
 
-describe the data in the dataset, making
-note of the interesting attributes and relationships in the data. Include 3-5 rows of
-sample data from each file. Very important: explain what insights you hope to gain from
-analyzing the data. If you don’t know why you want to analyze the data, you should stop
-now and look for a different dataset for the project.
+VAERS was created to detect unusual patterns of adverse events which might indicate a possible safety problem with a vaccine. This data contains the list of reported adverse events after a vaccine was administered as well as details regarding the patient, vaccine and symptoms experienced. Among the 3 dataset files, interesting attributes include patient's age, gender, state, date of vaccination, symptoms (though these are all unique), if they were life-threatening, ER visit, hospitilization, death of patient (if occured), whether patient recovered, current illness, and vaccine information, such as type of vaccine administered, manufacturer, dosage and administration route.
+
+Our main focus is the fact that many patients died or experienced adverse effects after vaccination. We want to investigate if anything outside of the vaccine itself can be attributed to these deaths or symptoms. We are interested in looking at whether there is a high correlation between the adverse effects and particular attributes of patients or vaccines, while keeping in mind that correlation does not indicate causation. For instance, are patients who experience adverse symptoms from a particular state, age group, or are currently diagnosed with a certain type of illness? Are these events related to a particular vaccine type, manufacturer or route of administration?
+
 	
-Data Set 2 - Behavior Risk Factor Surveillance System - 2014 (unless we find more recent year).
-Includes 1 data set with 464,000 rows.
-This data set is comprised of interviews from US residents about general health, mental health, and
-	medical expenses. We want to pair this data with our first set to see if we can find more connections
-	to the adverse event deaths.
-Variables include state, health ratings, health coverage, doctor information, exercise, sleep, and
-	various general questions related to physical and mental health.
-https://public.enigma.com/browse/collection/behavior-risk-factor-surveillance-system/b8a2f5bb-add2-4161-9f6e-6ef3520a018e
+Secondary Dataset: Behavior Risk Factor Surveillance System 2014 (unless we find more recent data) by Centers for Disease Control and Prevention (CDC).
 
-We want to use these data sets primarily to find out if there is any connection to the adverse events that
-	took place and a persons general health or other information. Is it just babies and old people that are having
-	issues with vaccines? Is there something in common the old people have? Is it physical health, mental health,
-	or some other underlying factor such as where they live or health care issues. With these data sets we hope
-	to find some sort of correlation between the two.
+Donwload link: https://public.enigma.com/browse/collection/behavior-risk-factor-surveillance-system/b8a2f5bb-add2-4161-9f6e-6ef3520a018e
+
+This dataset includes 1 file with 464,000 rows.
+
+The data set is comprised of interviews of US residents about general health, mental health, and medical expenses. We plan to pair this data with our primary dataset to see if we can find more connections to the adverse events from vaccination. Attributes include state, health ratings, health coverage, doctor information, exercise, sleep, and various general questions related to physical and mental health.
+
+We want to use these datasets primarily to find out if there is any connection between the adverse events that took place and a person's general health or healthcare access. Is it babies and old people that are experiencing issues with vaccines? Is there something in common the elderly have? Is it physical health, mental health, or some other underlying factor such as where they live or health care issues. With these datasets, we hope to find some sort of correlation between the two.
