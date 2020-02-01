@@ -1,13 +1,21 @@
-Data Set 1 - CDC VAERS (Vaccine Adverse Event Reporting System) 2019.
-Includes 3 data sets - Primary Information, Symptoms, Vaccines with around 16,000 rows each.
-This data states whether or not an adverse event took place after a vaccine was administered and
-	what took place afterwards. Our main focus is the fact that many patients died while also having
-	adverse effects. We want to see if anything outside of the vaccine itself can be attributed to the death.
+Data Set 1: Centers for Disease Control and Prevention (CDC) - Vaccine Adverse Event Reporting System (VAERS) 2019.
+
+Download link: https://vaers.hhs.gov/data/datasets.html
+
+The dataset consists of 3 files - Primary Information, Symptoms and Vaccines with around 16,000 rows each. 
+This data states whether or not an adverse event took place after a vaccine was administered and 
+what took place afterwards. Our main focus is the fact that many patients died while also having
+adverse effects. We want to see if anything outside of the vaccine itself can be attributed to the death.
 Among the 3 data sets variables include - patient age, the type of vaccine taken, state/time injection
-	administered, gender, symptoms (though these are all unique), death of patient, ER visit,
-	hospitilization, if symptoms life threatening, if recovered, if they had current illnesses,
-	and vaccine information such as type, manufacturer, dose, and administration site.
-https://vaers.hhs.gov/data/datasets.html
+administered, gender, symptoms (though these are all unique), death of patient, ER visit,
+hospitilization, if symptoms life threatening, if recovered, if they had current illnesses,
+and vaccine information such as type, manufacturer, dose, and administration site.
+
+describe the data in the dataset, making
+note of the interesting attributes and relationships in the data. Include 3-5 rows of
+sample data from each file. Very important: explain what insights you hope to gain from
+analyzing the data. If you don’t know why you want to analyze the data, you should stop
+now and look for a different dataset for the project.
 	
 Data Set 2 - Behavior Risk Factor Surveillance System - 2014 (unless we find more recent year).
 Includes 1 data set with 464,000 rows.
