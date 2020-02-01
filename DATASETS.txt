@@ -42,21 +42,3 @@ VAERS_ID	VAX_TYPE	VAX_MANU	VAX_LOT	VAX_DOSE_SERIES	VAX_ROUTE	VAX_SITE	VAX_NAME
 794157	VARZOS	GLAXOSMITHKLINE BIOLOGICALS		UNK			ZOSTER (SHINGRIX)
 
 794158	VARZOS	GLAXOSMITHKLINE BIOLOGICALS		UNK			ZOSTER (SHINGRIX)
-
-
-----------------------------------------------------------------------------------------------------------------------------------------
-	
-Secondary Dataset: Behavior Risk Factor Surveillance System 2014 (unless we find more recent data) by Centers for Disease Control and Prevention (CDC).
-
-Download link: https://public.enigma.com/browse/collection/behavior-risk-factor-surveillance-system/b8a2f5bb-add2-4161-9f6e-6ef3520a018e
-
-This dataset includes 1 file with 464,000 rows.
-
-The data set is comprised of interviews of US residents about general health, mental health, and medical expenses. We plan to pair this data with our primary dataset to see if we can find more connections to the adverse events from vaccination. Attributes include state, health ratings, health coverage, doctor information, exercise, sleep, and various general questions related to physical and mental health.
-
-We want to use these datasets primarily to find out if there is any connection between the adverse events that took place and a person's general health or healthcare access. Is it babies and old people that are experiencing issues with vaccines? Is there something in common the elderly have? Is it physical health, mental health, or some other underlying factor such as where they live or health care issues. With these datasets, we hope to find some sort of correlation between the two.
-
-
-Sample Data:
-
-
