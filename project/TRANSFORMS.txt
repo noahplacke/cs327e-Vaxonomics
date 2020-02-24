@@ -1,7 +1,7 @@
-Duplicate records exist in both Vaccine_Event and Patients_Event tables. 
+Duplicate records exist in both Vaccine_Event and Patients_Event tables. (We are assuming that duplicate record here means duplicate entries in a particular column.)
 Example in Vaccine_Events includes VAERS_ID 791470 where patient had three separate and different vaccines administered on the same day. 
-Example in Patient_Events includes VAERS_ID 794157 where patient had more than 5 symptoms listed therefore second entry created in original Symptoms table to include all reported symptoms.
+Example in Patient_Events includes VAERS_ID 794157 where patient had more than 5 symptoms listed therefore a second entry was created in the original Symptoms table to include all reported symptoms.
 
-Only Reports table has a primary key of VAERS_ID since all other tables contain duplicates. Because of this, referential integrity is not violated. Each foreign key is linked to a primary key in Reports. If record in Reports is deleted, the other tables will not have a relationship with the main record. Therefore, tables can only be joined if primary key in Reports exists so no violations are made.
+Only the Report table has a primary key of VAERS_ID since all other tables contain duplicates of the ID. Because of this, referential integrity is not violated. Each foreign key is linked to a primary key in Report. If a record in Report is deleted, the other tables will not have a relationship with the main record. Therefore, tables can only be joined if primary key in Report exists so no violations are made.
 
 Cast was not used in the models due to all features being assigned the correct type during staging.
