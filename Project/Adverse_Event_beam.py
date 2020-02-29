@@ -9,25 +9,8 @@ class FormatRECOVDFn(beam.DoFn):
     # Attribute type will be changed to boolean in schema
     event_record = element
     
-    # get all attributes
-    vaersid = event_record.get('VAERS_ID')
-    onsetdate = event_record.get('ONSET_DATE')
+    # get RECOVD attribute
     recovd = event_record.get('RECOVD')
-    died = event_record.get('DIED')
-    datedied = event_record.get('DATEDIED')
-    l_threat = event_record.get('L_THREAT')
-    ofc_visit = event_record.get('OFC_VISIT')
-    er_visit = event_record.get('ER_VISIT')
-    er_ed_visit = event_record.get('ER_ED_VISIT')
-    hospital = event_record.get('HOSPITAL')
-    hospdays = event_record.get('HOSPDAYS')
-    x_stay = event_record.get('X_STAY')
-    disable = event_record.get('DISABLE')
-    birth_defect = event_record.get('BIRTH_DEFECT')
-    other_meds = event_record.get('OTHER_MEDS')
-    cur_ill = event_record.get('CUR_ILL')
-    history = event_record.get('HISTORY')
-    prior_vax = event_record.get('PRIOR_VAX')
     
     # print current RECOVD values
     print('Current RECOVD: ', recovd)
@@ -168,6 +151,7 @@ def run():
      # specify id and schema
      dataset_id = 'vaers_modeled'
      table_id = 'Adverse_Event_Beam'
+     # change RECOVD and BIRTH_DEFECT attributes into BOOLEANS
      schema_id = 'VAERS_ID:INTEGER, ONSET_DATE:DATE, RECOVD:BOOLEAN, DIED:BOOLEAN, DATEDIED:DATE, L_THREAT:BOOLEAN, OFC_VISIT:BOOLEAN, ER_VISIT:BOOLEAN, ER_ED_VISIT:BOOLEAN, HOSPITAL:BOOLEAN, HOSPDAYS:INTEGER, X_STAY:BOOLEAN, DISABLE:BOOLEAN, BIRTH_DEFECT:BOOLEAN, OTHER_MEDS:STRING, CUR_ILL:STRING, HISTORY:STRING, PRIOR_VAX:STRING' 
 
      # write output PCollection to new BQ table
