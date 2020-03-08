@@ -11,9 +11,7 @@ These attributes are DIED, L_THREAT, OFC_VISIT, ER_VISIT, ER_ED_VISIT, HOSPITAL,
 
 3) In Vaccination table, for some records, the attributes V_FUNDBY, VAX_ROUTE and VAX_SITE have either empty or 'UNK' or 'UN' (Unknown) as values. To standardize them, these should be converted to 'UN'.
 
-Normalization issues :-
-
-1) In Vaccine table, there is a third normal form (3NF) violation. The attribute VAX_TYPE is not functionally determined by the PK, VAX_ID. Instead, it depends on the VAX_NAME attribute. 
+Normalization issues : None
 
 
 Milestone 4 Modeling:
