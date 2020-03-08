@@ -64,19 +64,19 @@ def run():
      p = Pipeline(options=options)
      
      # run BigQuery query on dataset
-     sql = 'SELECT * FROM vaers_modeled.Vaccination limit 50'
+     sql = 'SELECT * FROM vaers_modeled.Vaccination'
      bq_source = beam.io.BigQuerySource(query=sql, use_standard_sql=True)
 
      input_pcoll = p | 'Read from BigQuery' >> beam.io.Read(bq_source)
         
      # write input PCollection to input.txt
-     input_pcoll | 'Write input_pcoll log 1' >> WriteToText('input_vaccination.txt')
+     input_pcoll | 'Write input_pcoll log 1' >> WriteToText(DIR_PATH + 'input_vaccination.txt')
         
      # standardize vaccination V_FUNDBY, VAX_ROUTE and VAX_SITE unknown/empty attribute
      formatted_vaccination_pcoll = input_pcoll | 'Format Unknown Values' >> beam.ParDo(FormatUnknownFn())
         
      # write PCollection to log file
-     formatted_vaccination_pcoll | 'Write log 2' >> WriteToText('formatted_unknown_pcoll.txt')
+     formatted_vaccination_pcoll | 'Write log 2' >> WriteToText(DIR_PATH + 'formatted_unknown_pcoll.txt')
      
      
      # specify id and schema

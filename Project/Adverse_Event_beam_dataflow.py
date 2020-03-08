@@ -135,31 +135,31 @@ def run():
      p = Pipeline(options=options)
      
      # run BigQuery query on dataset
-     sql = 'SELECT * FROM vaers_modeled.Adverse_Event limit 50'
+     sql = 'SELECT * FROM vaers_modeled.Adverse_Event'
      bq_source = beam.io.BigQuerySource(query=sql, use_standard_sql=True)
 
      input_pcoll = p | 'Read from BigQuery' >> beam.io.Read(bq_source)
         
      # write input PCollection to input.txt
-     input_pcoll | 'Write input_pcoll log 1' >> WriteToText('input.txt')
+     input_pcoll | 'Write input_pcoll log 1' >> WriteToText(DIR_PATH + 'input.txt')
         
      # standardize adverse_event RECOVD attribute values into true or false (boolean)
      formatted_recovd_pcoll = input_pcoll | 'Format RECOVD' >> beam.ParDo(FormatRECOVDFn())
         
      # write PCollection to log file
-     formatted_recovd_pcoll | 'Write log 2' >> WriteToText('formatted_recovd_pcoll.txt')
+     formatted_recovd_pcoll | 'Write log 2' >> WriteToText(DIR_PATH + 'formatted_recovd_pcoll.txt')
         
      # standardize adverse_event BIRTH_DEFECT attribute values into true or false (boolean)
      formatted_defect_pcoll = formatted_recovd_pcoll | 'Format BIRTH_DEFECT' >> beam.ParDo(FormatBIRTH_DEFECTFn())
         
      # write PCollection to log file
-     formatted_defect_pcoll | 'Write log 3' >> WriteToText('formatted_defect_pcoll.txt')
+     formatted_defect_pcoll | 'Write log 3' >> WriteToText(DIR_PATH + 'formatted_defect_pcoll.txt')
         
      # standardize boolean attribute values which are null into false 
      output_pcoll = formatted_defect_pcoll | 'Format boolean attributes' >> beam.ParDo(FormatBooleanAttributesFn())
         
      # write output PCollection to output.txt
-     output_pcoll | 'Write output_pcoll log 4' >> WriteToText('output.txt')
+     output_pcoll | 'Write output_pcoll log 4' >> WriteToText(DIR_PATH + 'output.txt')
      
      # specify id and schema
      dataset_id = 'vaers_modeled'
