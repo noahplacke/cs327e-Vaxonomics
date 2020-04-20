@@ -24,6 +24,7 @@ There are no duplicate records on all modeled tables as they were eliminated thr
 
 Cast was not used during modeling as most of the attributes were assigned the correct type during staging. There are two attributes in Adverse_Event table which are currently of type string, but will be converted to booleans using Apache Beam.
 
-Milestone 9:
 
-There are no referential integrity or primary key violations.
+Milestone 9 Modeling:
+
+There are no referential integrity or primary key violations on the secondary dataset.
