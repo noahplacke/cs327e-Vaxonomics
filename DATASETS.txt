@@ -1,4 +1,4 @@
-Primary Dataset: Vaccine Adverse Event Reporting System (VAERS) 2019 by Centers for Disease Control and Prevention (CDC).
+Primary Dataset: Vaccine Adverse Event Reporting System (VAERS) 2018 by Centers for Disease Control and Prevention (CDC).
 
 Download link: https://vaers.hhs.gov/data/datasets.html
 
